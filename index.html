@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Ajaib - Raih Bonus 10-20 JT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --secondary: #10b981;
+            --accent: #f59e0b;
+            --dark: #1e293b;
+            --light: #f8fafc;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f1f5f9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .promo-container {
+            max-width: 650px;
+            margin: 2rem auto;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .promo-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .promo-header {
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .promo-header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .promo-highlight {
+            font-style: italic;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            margin: 0.5rem 0;
+            font-weight: 500;
+        }
+        
+        .promo-body {
+            padding: 2rem;
+        }
+        
+        .benefits-list {
+            margin: 1.5rem 0;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .benefit-item:hover {
+            background-color: #f8fafc;
+            transform: translateX(5px);
+        }
+        
+        .benefit-icon {
+            color: var(--secondary);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        
+        .trading-plan {
+            background-color: #ecfdf5;
+            border-left: 4px solid var(--secondary);
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .trading-icon {
+            color: var(--secondary);
+            font-size: 1.5rem;
+        }
+        
+        .cta-section {
+            text-align: center;
+            margin: 2rem 0 1rem;
+        }
+        
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: #25D366;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+        
+        .cta-button:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+        
+        .whatsapp-icon {
+            font-size: 1.4rem;
+        }
+        
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 1.5rem;
+        }
+        
+        .tag {
+            background-color: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+        
+        .counter-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 1.5rem 0;
+        }
+        
+        .counter-box {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 80px;
+        }
+        
+        .counter-number {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        
+        .counter-label {
+            font-size: 0.8rem;
+            opacity: 0.9;
+        }
+        
+        .disclaimer {
+            font-size: 0.8rem;
+            color: #64748b;
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        @media (max-width: 768px) {
+            .promo-container {
+                margin: 1rem;
+                border-radius: 10px;
+            }
+            
+            .promo-header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .counter-container {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="promo-container">
+        <div class="promo-header">
+            <h1><i class="fas fa-magic"></i> PERLU UANG CEPAT..??</h1>
+            <p class="promo-highlight">Raih bonus 10 - 20 jt dalam waktu satu dua bulan saja.</p>
+        </div>
+        
+        <div class="promo-body">
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle benefit-icon"></i>
+                    <div>Program berbagi kebaikan Ajaib dengan sistem yang mudah</div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle benefit-icon"></i>
+                    <div>Daftar hanya dengan Rp 50.000 saja</div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle benefit-icon"></i>
+                    <div>Bonus referral Rp 50.000 per orang</div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle benefit-icon"></i>
+                    <div>Ajak 1 teman saja sudah balik modal</div>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-check-circle benefit-icon"></i>
+                    <div>Bonus langsung masuk ke rekening tanpa melalui admin</div>
+                </div>
+            </div>
+            
+            <div class="trading-plan">
+                <i class="fas fa-chart-line trading-icon"></i>
+                <div>
+                    <strong>Untuk yang pasif income:</strong> Nikmati plan trading dengan profit 1% sampai 5% perhari 
+                    tanpa harus mencari member. Sistem dikelola oleh profesional.
+                </div>
+            </div>
+            
+            <div class="counter-container">
+                <div class="counter-box">
+                    <div class="counter-number" id="member-count">0</div>
+                    <div class="counter-label">Member</div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-number" id="bonus-count">0</div>
+                    <div class="counter-label">Bonus Dibagikan</div>
+                </div>
+                <div class="counter-box">
+                    <div class="counter-number" id="days-count">0</div>
+                    <div class="counter-label">Hari Berjalan</div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h3><i class="fas fa-edit"></i> Pendaftaran Mudah</h3>
+                <p>Klik tombol di bawah untuk bergabung sekarang juga!</p>
+                <a href="https://wa.me/+6283863627101?text=Daftar+Bisnis+Ajaib" class="cta-button" id="wa-button">
+                    <i class="fab fa-whatsapp whatsapp-icon"></i> Daftar via WhatsApp
+                </a>
+            </div>
+            
+            <div class="tags">
+                <div class="tag">#BISNIS AJAIB</div>
+                <div class="tag">#BONUS REFF 100%</div>
+            </div>
+            
+            <p class="disclaimer">
+                *Hasil yang didapatkan bisa berbeda-beda tergantung usaha masing-masing member.
+                Program ini bukan merupakan skema cepat kaya tetapi kesempatan bisnis yang fair.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Animated counters
+        function animateCounters() {
+            const memberCounter = document.getElementById('member-count');
+            const bonusCounter = document.getElementById('bonus-count');
+            const daysCounter = document.getElementById('days-count');
+            
+            const animate = (element, target, prefix = '', suffix = '') => {
+                const duration = 2000;
+                const start = 0;
+                const increment = target / (duration / 16);
+                let current = start;
+                
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        clearInterval(timer);
+                        current = target;
+                    }
+                    element.textContent = prefix + Math.floor(current).toLocaleString() + suffix;
+                }, 16);
+            };
+            
+            animate(memberCounter, 1245);
+            animate(bonusCounter, 560, 'Rp ', ' jt');
+            animate(daysCounter, 78);
+        }
+        
+        // WhatsApp button animation
+        function setupWhatsAppButton() {
+            const waButton = document.getElementById('wa-button');
+            
+            waButton.addEventListener('mouseover', () => {
+                waButton.innerHTML = '<i class="fab fa-whatsapp whatsapp-icon"></i> Hubungi Kami';
+            });
+            
+            waButton.addEventListener('mouseout', () => {
+                waButton.innerHTML = '<i class="fab fa-whatsapp whatsapp-icon"></i> Daftar via WhatsApp';
+            });
+            
+            // Click tracking (example)
+            waButton.addEventListener('click', () => {
+                console.log('WhatsApp button clicked');
+                // You can add analytics tracking here
+            });
+        }
+        
+        // Benefit items animation
+        function animateBenefitItems() {
+            const benefitItems = document.querySelectorAll('.benefit-item');
+            
+            benefitItems.forEach((item, index) => {
+                // Delay each item's animation
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateX(0)';
+                }, index * 200);
+                
+                // Initial state
+                item.style.opacity = '0';
+                item.style.transform = 'translateX(-20px)';
+                item.style.transition = 'all 0.5s ease';
+            });
+        }
+        
+        // Initialize all animations when page loads
+        window.addEventListener('DOMContentLoaded', () => {
+            animateCounters();
+            setupWhatsAppButton();
+            animateBenefitItems();
+            
+            // Add slight pulse animation to header
+            const header = document.querySelector('.promo-header');
+            setInterval(() => {
+                header.style.boxShadow = '0 0 20px rgba(79, 70, 229, 0.7)';
+                setTimeout(() => {
+                    header.style.boxShadow = 'none';
+                }, 1000);
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
